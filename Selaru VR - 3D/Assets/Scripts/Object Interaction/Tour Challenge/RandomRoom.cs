@@ -18,7 +18,7 @@ public class RandomRoom : MonoBehaviour
     }
     public void RandomDest()
     {
-        int randomFloor = Random.Range(1, 2);
+        int randomFloor = Random.Range(1, 4);
         int randomRoom;
         switch (randomFloor)
         {
@@ -27,6 +27,14 @@ public class RandomRoom : MonoBehaviour
                 destination = listOfDestination._destination1[randomRoom];
                 break;
             case 2:
+                randomRoom = Random.Range(0, listOfDestination._destination2.Length);
+                destination = listOfDestination._destination2[randomRoom];
+                break;
+            case 3:
+                randomRoom = Random.Range(0, listOfDestination._destination2.Length);
+                destination = listOfDestination._destination2[randomRoom];
+                break;
+            case 4:
                 randomRoom = Random.Range(0, listOfDestination._destination2.Length);
                 destination = listOfDestination._destination2[randomRoom];
                 break;
